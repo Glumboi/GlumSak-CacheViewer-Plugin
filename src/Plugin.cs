@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Dynamic;
 using System.Reflection;
 using GlumSak_MetaViewer.UI;
 
@@ -8,7 +9,7 @@ namespace GlumSak_MetaViewer
     {
         public static int exitCode;
 
-        public static int PluginEntryPoint(object[] args) //--> Default Entrypoint of the Plugin
+        public static int PluginEntryPoint(IntPtr mainWindowHandle, object[] args) //--> Default Entrypoint of the Plugin
         {
             if (args.Length > 0 &&
                 args[0] is bool &&
